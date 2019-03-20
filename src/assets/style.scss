@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+@import "~css-star-rating/scss/star-rating.scss";
+@import "~nouislider/distribute/nouislider.min.css";
+@import "./form.scss";
+
+body,html{
+  font-family: 'Roboto' , 'Lato', san-serif;
+}
+
+a.btn.btn-primary{
+  background: #731B23;
+}
+
+nav li.active a{
+  background: #731B23;
+}
+
+/* Override Colors by using style rules */
+.star-container .star{
+  height: 100px;
+  width: 100px;
+
+  &:hover{
+    svg {
+      fill: #FBC12D !important;
+    }
+    i {
+      color: #FBC12D !important;
+    } 
+  }
+}
+
+.rating.color-default .star-container .star {
+  svg {
+    fill: #FBC12D !important;
+  }
+  i {
+    color: #FBC12D !important;
+  }
+}
+
+.rating.color-negative .star-container .star {
+  svg {
+    fill: #FBC12D !important;
+  }
+  i {
+    color: #FBC12D !important;
+  }
+}
+
+.rating.color-ok .star-container .star {
+  svg {
+    fill: #FBC12D !important;
+  }
+  i {
+    color: #FBC12D !important;
+  }
+}
+
+.rating.color-positive .star-container .star {
+  svg {
+    fill: #FBC12D !important;
+  }
+  i {
+    color: #FBC12D !important;
+  }
+}
+
+.rating.color-default .star-container .star {
+  svg {
+    fill: #ff0;
+  }
+  i {
+    color: #ff0;
+  }
+}
+
+
+.noUi-handle{
+  background-image: url(../assets/images/drag-idle-hover.svg)!important;
+  background-size: 100% 100%!important;
+  background-repeat: no-repeat!important;
+  background: transparent;
+  border: 0px solid;
+  box-shadow: none;
+  
+  &:before{
+    background: transparent;
+  }
+
+  &:after{
+    background: transparent;
+  }
+}
+
+.noUi-end{
+  background-image: url(../assets/images/choose-active.svg)!important;
+  transform: scale3d(2, 2, 1);
+}
+
+.noUi-active{
+  background-image: url(../assets/images/choose-hover.svg)!important;
+}
+
+.noUi-target, .noUi-connects{
+  border-radius: 15px;
+}
+
+.noUi-marker-horizontal{
+  height: 30px !important;
+  top: 0;
+}
+
+.noUi-value-horizontal{
+  font-size: 20px;
+  top: 30px;
+}
+
+.noUi-value-large{
+  font-size: 25px;
+  top: 30px;
+}
+
+.likert-unchecked{
+  position: relative;
+}
+
+.likert-radio{
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:checked ~ label{
+    .likert-unchecked{
+      display: none;
+    }
+
+    .likert-checked{
+      display: inline-block;
+      position: relative;
+    }
+  }
+}
+
+.likert-label{
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  position: relative;
+  top: -40px;
+  z-index: 10;
+}
+
+.strongly-disagree-hover, .disagree-hover, .neutral-hover, .agree-hover, .strongly-agree-hover{
+  position: absolute;
+  top:20px;
+  left:20px;
+  display: none;
+}
+
+.strongly-disagree-checked, .disagree-checked, .neutral-checked, .agree-checked, .strongly-agree-checked{
+  display:none;
+}
+
+.strongly-disagree-label{
+  &:hover{
+    .strongly-disagree-hover{
+      display: inline;
+    }
+
+    .strongly-disagree-unchecked{
+      display: inline-block;
+    }
+  }
+}
+
+.disagree-label{
+  &:hover{
+    .disagree-hover{
+      display: inline;
+      top: 17px;
+      left: 17px;
+    }
+
+    .disagree-unchecked{
+      display: inline-block;
+    }
+  }
+}
+
+.neutral-label{
+  &:hover{
+    .neutral-hover{
+      display: inline;
+      top: 17px;
+      left: 17px;
+    }
+
+    .neutral-unchecked{
+      display: inline-block;
+    }
+  }
+}
+
+.agree-label{
+  &:hover{
+    .agree-hover{
+      top: 17px;
+      left: 17px;
+      display: inline;
+    }
+
+    .agree-unchecked{
+      display: inline-block;
+    }
+  }
+}
+
+.strongly-agree-label{
+  &:hover{
+    .strongly-agree-hover{
+      top: 17px;
+      left: 17px;      
+      display: inline;
+    }
+
+    .strongly-agree-unchecked{
+      display: inline-block;
+    }
+  }
+}
+
+/* global css */
+.no-padd{
+  padding: 0;
+}
+
+[hidden]{
+  display:none;
+}
+
+.text-blue-talenta{
+  color: #0360C5;
+}
+
+.text-red-talenta{
+  color: #5F151C;
+}
+
+.m-bot-20{
+  margin-bottom: 20px !important;
+}
+
+.m-top-20{
+  margin-top: 20px !important;
+}
+
+.btn-success-talenta{
+  background-color: #54C37F;
+
+  &:hover{
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,59 @@
+<div class="card">
+  <div class="card-content">
+    <form>
+      <div class="row">
+        <div class="col-md-12 no-padd">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>Survey Type</label>
+              <div class="radio-button-square">
+                <label class="box-frame">
+                  <input type="radio" name="radio" checked/>
+                  <div class="box-1 box">
+                    <span>Weekly</span>
+                  </div>
+                </label>
+
+                <label class="box-frame">
+                  <input type="radio" name="radio"/>
+                  <div class="box-2 box">
+                    <span>Monthly</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>When do you want to launch</label>
+              <datetime [(ngModel)]="date_launch" [timepicker]=false [datepicker]="{ icon: 'fa fa-calendar' }" [ngModelOptions]="{standalone: true}"> </datetime>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="form-group">
+            <label>Participate in this survey</label>
+            <ng-select  [multiple]="true"
+              [items]="items"
+              [disabled]="disabled"
+              (data)="refreshValue($event)"
+              (selected)="selected($event)"
+              (removed)="removed($event)"
+              placeholder="No city selected"></ng-select>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <!-- <button class="btn pull-right" style="background-color: #731B23;"> Submit </button> -->
+          <a [routerLink]="['/question']" class="btn pull-right" style="background-color: #731B23;">Submit</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

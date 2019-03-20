@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="97px" height="97px" viewBox="0 0 97 97" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>3active</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="50%" gradientTransform="translate(0.500000,0.500000),scale(0.944954,1.000000),rotate(180.000000),scale(1.000000,0.210153),translate(-0.500000,-0.500000)" id="radialGradient-1">
+            <stop stop-color="#FF0000" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Admin" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3">
+            <circle id="Oval-8-Copy-6" fill="#F5D223" cx="48.2834646" cy="47.9527559" r="47.9527559"></circle>
+            <ellipse id="Oval-12" fill-opacity="0.200000018" fill="url(#radialGradient-1)" cx="50.0275591" cy="52.3188976" rx="41.6259843" ry="39.3346457"></ellipse>
+            <path d="M20.2304676,9.16535433 C9.9199521,17.3434024 3.30708661,29.9811833 3.30708661,44.1634818 C3.30708661,68.8206041 23.2956336,88.8091511 47.9527559,88.8091511 C72.6098782,88.8091511 92.5984252,68.8206041 92.5984252,44.1634818 C92.5984252,29.9811833 85.9855597,17.3434024 75.6750442,9.16535433 C87.9171147,17.8537437 95.9055118,32.1426468 95.9055118,48.2973401 C95.9055118,74.7809159 74.4363317,96.250096 47.9527559,96.250096 C21.4691801,96.250096 0,74.7809159 0,48.2973401 C0,32.1426468 7.9883971,17.8537437 20.2304676,9.16535433 Z" id="Combined-Shape-Copy-2" fill="#000000" opacity="0.1"></path>
+            <g id="Group-17" transform="translate(14.511811, 51.937008)" fill="#F5A623">
+                <ellipse id="Oval-9-Copy-2" cx="7.48622047" cy="4.28346457" rx="7.23425197" ry="4.13385827"></ellipse>
+                <ellipse id="Oval-9-Copy-3" cx="59.5728346" cy="4.28346457" rx="7.23425197" ry="4.13385827"></ellipse>
+            </g>
+            <path d="M42.4212598,65.3976378 L54.9734943,65.3976378" id="Line-4" stroke="#8B572A" stroke-width="4" stroke-linecap="round"></path>
+            <g id="Group-16" transform="translate(21.385827, 41.244094)" fill="#8B572A">
+                <circle id="Oval-10" cx="4.88976378" cy="4.22834646" r="4.13385827"></circle>
+                <circle id="Oval-10-Copy" cx="49.5354331" cy="4.22834646" r="4.13385827"></circle>
+            </g>
+            <ellipse id="Oval-12-Copy-2" fill="#FFFFFF" opacity="0.440065299" transform="translate(48.641732, 16.220472) scale(1, -1) translate(-48.641732, -16.220472) " cx="48.6417323" cy="16.2204724" rx="21.9094488" ry="12.4015748"></ellipse>
+        </g>
+    </g>
+</svg>

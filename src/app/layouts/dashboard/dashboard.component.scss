@@ -1,0 +1,18 @@
+.card-top-dashboard{
+  height: 230px;
+  max-height: 230px;
+
+  &.card-poll{
+    border: 1px solid #b1cdec;
+  }
+
+  .card-content{
+    height: 190px;
+    max-height: 190px;
+
+    .poll-content-frame{
+      border: 1px solid #d9d9d9;
+      margin: 0 20px;
+    }
+  }
+}

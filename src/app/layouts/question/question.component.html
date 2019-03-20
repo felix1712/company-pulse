@@ -1,0 +1,346 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-content card-content-question">
+        <h3 class="text-center text-blue-talenta"><b>Weekly Survey 1</b></h3> <!-- Will be Dynamic -->
+        <h5 class="text-center text-red-talenta"><b><i class="fa fa-exclamation-circle exclamation-mark"></i> your answer is always anonymous</b></h5>
+        <!-- this line have to track question loading bar -->
+        <img src="">
+
+        <div id="question-1" *ngIf="showQuestion1" [formGroup]="starForm">
+          <div class="row frame-question">
+            <div class="col-md-12">
+              <h2 class="text-center m-bot-20 question-content">Generally Sepiking, how would your rate level happiness at work</h2>
+              <star-rating-comp 
+                [starType]="'svg'" 
+                [hoverEnabled]="true" 
+                (onClick)="onClick($event)"
+                [labelText]="starForm.get('labelText').value"
+                [labelPosition]="starForm.get('labelPosition').value">
+              </star-rating-comp>
+            </div>
+          </div>
+        </div>
+
+        <div id="question-2" *ngIf="showQuestion2">
+          <div class="row frame-question">
+            <div class="col-md-10 col-md-offset-1 m-bot-20">
+              <h2 class="text-center m-bot-20 question-content">Give me some slider</h2>
+              <form [formGroup]="form1">
+                <nouislider [config]="sliderConfig" [formControl]="form1.controls.single" (update)="onUpdate($event)" (end)="onEnd($event)" (slide)="onEnd($event)"></nouislider>
+              </form>
+            </div>
+            <div class="col-md-10 col-md-offset-1 no-padd m-top-20">
+              <div class="col-md-6 no-padd text-left"><h3>Bad</h3></div>
+              <div class="col-md-6 no-padd text-right"><h3>Good</h3></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="question-3" *ngIf="showQuestion3">
+          <div class="row frame-question">
+            <div class="col-md-12">
+              <div class="wrap">
+                <h2 class="text-center m-bot-20 question-content">This is a Likert Scale survey</h2>
+                <form [formGroup]="form1">
+                  <ul class='likert'>
+                    <li>
+                      <input type="radio" name="likert" value="strong_disagree" id="stronglyDisagree" class="likert-radio">
+                      <label class="likert-label strongly-disagree-label" for="stronglyDisagree">
+                        <svg width="100px" height="100px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="strongly-disagree-unchecked likert-unchecked">
+                            <defs></defs>
+                            <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-649.000000, -337.000000)">
+                                <circle id="shape-base" fill="#E3E3E3" cx="683.5" cy="371.5" r="34.5"></circle>
+                            </g>
+                        </svg>
+                        <svg width="100px" height="100px" viewBox="0 0 90 90" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="strongly-disagree-hover likert-hover">
+                          <title></title>
+                          <defs></defs>
+                          <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-989.000000, -351.000000)">
+                              <g id="choose-hover" transform="translate(989.000000, 351.000000)" fill="#0360C5">
+                                  <circle id="Oval-13" opacity="0.333138993" cx="21" cy="21" r="21"></circle>
+                                  <circle id="Oval-13" cx="20.5" cy="20.5" r="12.5"></circle>
+                              </g>
+                          </g>
+                        </svg>
+
+                        <svg width="100px" height="100px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="strongly-disagree-checked likert-checked">
+                          <title></title>
+                          <defs></defs>
+                          <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-827.000000, -352.000000)">
+                              <g id="choose-active" transform="translate(827.000000, 352.000000)">
+                                  <circle id="Oval-13-Copy" fill="#69C800" cx="20" cy="20" r="20"></circle>
+                                  <polyline id="Path-10" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="11.429948 21.5328522 17.3623141 27.4652183 31.0923137 13.7352188"></polyline>
+                              </g>
+                          </g>
+                        </svg>
+                      </label>
+                      <p>Strongly Disagree</p>
+                    </li>
+                    <li>
+                      <input type="radio" name="likert" value="disagree" class="likert-radio" id="disagree">
+                      <label class="likert-label disagree-label" for="disagree">
+
+                        <svg width="100px" height="100px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="disagree-unchecked likert-unchecked">
+                            <defs></defs>
+                            <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-649.000000, -337.000000)">
+                                <circle id="shape-base" fill="#E3E3E3" cx="683.5" cy="371.5" r="34.5"></circle>
+                            </g>
+                        </svg>
+
+                        <svg width="100px" height="100px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="disagree-hover likert-hover">
+                          <title></title>
+                          <defs></defs>
+                          <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-989.000000, -351.000000)">
+                              <g id="choose-hover" transform="translate(989.000000, 351.000000)" fill="#0360C5">
+                                  <circle id="Oval-13" opacity="0.333138993" cx="21" cy="21" r="21"></circle>
+                                  <circle id="Oval-13" cx="20.5" cy="20.5" r="12.5"></circle>
+                              </g>
+                          </g>
+                        </svg>
+
+                        <svg width="100px" height="100px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="disagree-checked likert-checked">
+                          <title></title>
+                          <defs></defs>
+                          <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-827.000000, -352.000000)">
+                              <g id="choose-active" transform="translate(827.000000, 352.000000)">
+                                  <circle id="Oval-13-Copy" fill="#69C800" cx="20" cy="20" r="20"></circle>
+                                  <polyline id="Path-10" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="11.429948 21.5328522 17.3623141 27.4652183 31.0923137 13.7352188"></polyline>
+                              </g>
+                          </g>
+                        </svg>
+                      </label>
+                      <p>Disagree</p>
+                    </li>
+                    <li>
+                      <input type="radio" name="likert" value="neutral" class="likert-radio" id="neutral">
+                      <label class="likert-label neutral-label" for="neutral">
+                        <svg width="100px" height="100px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="neutral-unchecked likert-unchecked">
+                            <defs></defs>
+                            <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-649.000000, -337.000000)">
+                                <circle id="shape-base" fill="#E3E3E3" cx="683.5" cy="371.5" r="34.5"></circle>
+                            </g>
+                        </svg>
+
+                        <svg width="100px" height="100px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="neutral-hover likert-hover">
+                          <title></title>
+                          <defs></defs>
+                          <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-989.000000, -351.000000)">
+                              <g id="choose-hover" transform="translate(989.000000, 351.000000)" fill="#0360C5">
+                                  <circle id="Oval-13" opacity="0.333138993" cx="21" cy="21" r="21"></circle>
+                                  <circle id="Oval-13" cx="20.5" cy="20.5" r="12.5"></circle>
+                              </g>
+                          </g>
+                        </svg>
+
+                        <svg width="100px" height="100px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="neutral-checked likert-checked">
+                          <title></title>
+                          <defs></defs>
+                          <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-827.000000, -352.000000)">
+                              <g id="choose-active" transform="translate(827.000000, 352.000000)">
+                                  <circle id="Oval-13-Copy" fill="#69C800" cx="20" cy="20" r="20"></circle>
+                                  <polyline id="Path-10" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="11.429948 21.5328522 17.3623141 27.4652183 31.0923137 13.7352188"></polyline>
+                              </g>
+                          </g>
+                        </svg>
+                      </label>
+                        <p>Neutral</p>
+                    </li>
+                    <li>
+                      <input type="radio" name="likert" value="agree" class="likert-radio" id="agree">
+                      <label class="likert-label agree-label" for="agree">
+                        <svg width="100px" height="100px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="agree-unchecked likert-unchecked">
+                            <defs></defs>
+                            <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-649.000000, -337.000000)">
+                                <circle id="shape-base" fill="#E3E3E3" cx="683.5" cy="371.5" r="34.5"></circle>
+                            </g>
+                        </svg>
+
+                        <svg width="100px" height="100px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="agree-hover likert-hover">
+                          <title></title>
+                          <defs></defs>
+                          <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-989.000000, -351.000000)">
+                              <g id="choose-hover" transform="translate(989.000000, 351.000000)" fill="#0360C5">
+                                  <circle id="Oval-13" opacity="0.333138993" cx="21" cy="21" r="21"></circle>
+                                  <circle id="Oval-13" cx="20.5" cy="20.5" r="12.5"></circle>
+                              </g>
+                          </g>
+                        </svg>
+
+                        <svg width="100px" height="100px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="agree-checked likert-checked">
+                          <title></title>
+                          <defs></defs>
+                          <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-827.000000, -352.000000)">
+                              <g id="choose-active" transform="translate(827.000000, 352.000000)">
+                                  <circle id="Oval-13-Copy" fill="#69C800" cx="20" cy="20" r="20"></circle>
+                                  <polyline id="Path-10" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="11.429948 21.5328522 17.3623141 27.4652183 31.0923137 13.7352188"></polyline>
+                              </g>
+                          </g>
+                        </svg>
+                      </label>
+                      <p>Agree</p>
+                    </li>
+                    <li>
+                      <input type="radio" name="likert" value="strong_agree" class="likert-radio" id="stronglyAgree">
+                      <label class="likert-label strongly-agree-label" for="stronglyAgree">
+                        <svg width="100px" height="100px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="strongly-agree-unchecked-unchecked likert-unchecked">
+                            <defs></defs>
+                            <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-649.000000, -337.000000)">
+                                <circle id="shape-base" fill="#E3E3E3" cx="683.5" cy="371.5" r="34.5"></circle>
+                            </g>
+                        </svg>
+
+                        <svg width="100px" height="100px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="strongly-agree-hover likert-hover">
+                          <title></title>
+                          <defs></defs>
+                          <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-989.000000, -351.000000)">
+                              <g id="choose-hover" transform="translate(989.000000, 351.000000)" fill="#0360C5">
+                                  <circle id="Oval-13" opacity="0.333138993" cx="21" cy="21" r="21"></circle>
+                                  <circle id="Oval-13" cx="20.5" cy="20.5" r="12.5"></circle>
+                              </g>
+                          </g>
+                        </svg>
+
+                        <svg width="100px" height="100px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="strongly-agree-checked likert-checked">
+                          <title></title>
+                          <defs></defs>
+                          <g id="Question-Type-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-827.000000, -352.000000)">
+                              <g id="choose-active" transform="translate(827.000000, 352.000000)">
+                                  <circle id="Oval-13-Copy" fill="#69C800" cx="20" cy="20" r="20"></circle>
+                                  <polyline id="Path-10" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="11.429948 21.5328522 17.3623141 27.4652183 31.0923137 13.7352188"></polyline>
+                              </g>
+                          </g>
+                        </svg>
+                      </label>
+                      <p>Strongly Agree</p>
+                    </li>
+                  </ul>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="question-4" *ngIf="showQuestion4">
+          <div class="row frame-question">
+            <div class="col-md-12">
+              <div class="col-md-3 text-center">
+                <input type="radio" name="smile-form" class="smile-radio-form" id="smile1">
+                <label for="smile1" class="label-smile-form">
+                  <div class="col-md-12 no-padd">
+                    <img src="../../assets/images/1active.svg" class="smile-img smile-1">
+                  </div>
+                  <div class="col-md-12 no-padd">
+                    <h3><b>Not at all !</b></h3>
+                  </div>
+                </label>
+              </div>
+              <div class="col-md-3 text-center">
+                <input type="radio" name="smile-form" class="smile-radio-form" id="smile2">
+                <label for="smile2" class="label-smile-form">
+                  <div class="col-md-12 no-padd">
+                    <img src="../../assets/images/2active.svg" class="smile-img smile-2">
+                  </div>
+                  <div class="col-md-12 no-padd">
+                    <h3><b>I doubt it</b></h3>
+                  </div>
+                </label>
+              </div>
+              <div class="col-md-3 text-center">
+                <input type="radio" name="smile-form" class="smile-radio-form" id="smile3">
+                <label for="smile3" class="label-smile-form">
+                  <div class="col-md-12 no-padd">
+                    <img src="../../assets/images/3active.svg" class="smile-img smile-3">
+                  </div>
+                  <div class="col-md-12 no-padd">
+                    <h3><b>I Think So !</b></h3>
+                  </div>
+                </label>
+              </div>
+              <div class="col-md-3 text-center">
+                <input type="radio" name="smile-form" class="smile-radio-form" id="smile4">
+                <label for="smile4" class="label-smile-form">
+                  <div class="col-md-12 no-padd">
+                    <img src="../../assets/images/4active.svg" class="smile-img smile-4">
+                  </div>
+                  <div class="col-md-12 no-padd">
+                    <h3><b>Very Much</b></h3>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="feedback-question" *ngIf="showFeedbackQuestion">
+          <div class="row frame-question">
+            <div class="container">
+              <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-6 feedback-box text-center">
+                  <div class="feedback-content have-feedback">
+                    <a (click)="ConfirmButton()">
+                      <img src="../../assets/images/have-feedback.svg">
+                      <h4><b>Yes. I've got something on my mind...</b></h4>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 feedback-box text-center">
+                  <div class="feedback-content not-have-feedback">
+                    <a [routerLink]="['/dashboard']">
+                      <img src="../../assets/images/not-have-feedback.svg">
+                      <h4 class="m-top-20"><b>Nope. Nothing to share at the moment.</b></h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="feedback-form" *ngIf="showFeedbackForm">
+          <div class="row frame-feedback">
+            <div class="container">
+              <div class="col-md-12">
+                <h4>What's on your mind?</h4>
+                <textarea class="form-control" placeholder="Details matter! They'll help your company know what to do to improve." rows="5"></textarea>
+              </div>
+              <div class="col-md-12">
+                <div class="col-md-6 no-padd">
+                  
+                </div>
+                <div class="col-md-6 no-padd">
+                  <a [routerLink]="['/dashboard']" class="btn btn-success-talenta pull-right">
+                    Send Feedback
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card-footer">
+        <div class="col-md-12 footer-frame">
+          <div class="col-md-2 arrow-button">
+            <a (click)="PrevButton()" class="prev-button">  
+              <span class="my-icon my-icon-previous"><i class="fa fa-angle-left"></i></span>
+              <span><b>Previous</b></span>
+            </a>
+          </div>
+          <div class="col-md-8 text-center">
+            <h5>Question Completed 1 of 10</h5>
+          </div>
+          <div class="col-md-2 text-right arrow-button">
+            <a (click)="ConfirmButton()" class="next-button">
+              <span><b>Confirm</b></span>
+              <span class="my-icon my-icon-next"> 
+                <i class="fa fa-angle-right"></i> 
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

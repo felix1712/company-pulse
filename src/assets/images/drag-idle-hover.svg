@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="54px" height="54px" viewBox="5 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>drag</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Question-Type-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-306.000000, -348.000000)">
+        <g id="drag" transform="translate(306.000000, 348.000000)">
+            <circle id="Oval-Copy" fill="#D8D8D8" cx="27" cy="27" r="27"></circle>
+            <g id="Group-4-Copy" transform="translate(23.000000, 11.000000)" fill="#C3C3C3">
+                <circle id="Oval-2" cx="4" cy="4" r="4"></circle>
+                <circle id="Oval-2-Copy" cx="4" cy="16" r="4"></circle>
+                <circle id="Oval-2-Copy-2" cx="4" cy="28" r="4"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

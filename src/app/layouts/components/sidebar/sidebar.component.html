@@ -1,0 +1,35 @@
+<div class="sidebar" data-color="purple" data-image="../assets/img/sidebar-1.jpg">
+  <div class="logo">
+    <a href="http://www.creative-tim.com" class="simple-text">
+        Creative Tim
+    </a>
+  </div>
+  <div class="sidebar-wrapper">
+    <ul class="nav">
+      <li class="active">
+        <a [routerLink]="['/dashboard']" [routerLinkActive]="['router-link-active']">
+          <i class="material-icons">Dashboard</i>
+          <p>Dashboard</p>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/survey/new']" [routerLinkActive]="['router-link-active']">
+          <i class="material-icons">Survey</i>
+          <p>Survey</p>
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)">
+          <i class="material-icons">Report</i>
+          <p>Feedback</p>
+        </a>
+      </li>
+      <li>
+        <a [routerLink]="['/report']" [routerLinkActive]="['router-link-active']">
+          <i class="material-icons">library_books</i>
+          <p>Report</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
